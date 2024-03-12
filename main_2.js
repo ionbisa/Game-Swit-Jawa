@@ -12,7 +12,7 @@ function getHasil(comp, player) {
   if (player == comp) return "SERI!";
   if (player == "gajah") return comp == "orang" ? "MENANG!" : "KALAH!";
   if (player == "orang") return comp == "gajah" ? "KALAH!" : "MENANG!";
-  if (player == "semut") return comp == "orang" ? "KALAH" : "MENANG!";
+  if (player == "semut") return comp == "orang" ? "KALAH!" : "MENANG!";
 }
 
 // menentukan pilihan Computer dengan memutar image
