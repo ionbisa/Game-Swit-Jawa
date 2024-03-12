@@ -24,7 +24,7 @@ while (tanya) {
   } else if (p == "orang") {
     hasil = comp == "gajah" ? "KALAH!" : "MENANG!";
   } else if (p == "semut") {
-    hasil = comp == "orang" ? "KALAH" : "MENANG!";
+    hasil = comp == "orang" ? "KALAH!" : "MENANG!";
   } else {
     hasil = "memasukkan pilihan yang salah!";
   }
