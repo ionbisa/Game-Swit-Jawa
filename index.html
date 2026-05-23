@@ -1,56 +1,111 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suwit Game</title>
+    <title>Suwit Jawa Arena</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Suwit Jawa v2.0</h1>
+    <main class="game-shell">
+      <header class="game-header">
+        <p class="eyebrow">ionbisa</p>
+        <h1>Suwit Jawa</h1>
+      </header>
 
-    <div class="container">
-      <div class="scoreboard">
-        <div class="score-box">
-          <span>Player</span>
-          <strong class="score-player">0</strong>
+      <section class="container" aria-label="Arena permainan Suwit Jawa">
+        <div class="scoreboard">
+          <div class="score-box">
+            <span class="player-name">Player</span>
+            <strong class="score-player">0</strong>
+          </div>
+          <div class="score-round">
+            <span>Ronde</span>
+            <strong class="round-number">1/5</strong>
+          </div>
+          <div class="score-box">
+            <span>Computer</span>
+            <strong class="score-computer">0</strong>
+          </div>
         </div>
-        <div class="score-round">
-          <span>Ronde</span>
-          <strong class="round-number">1/5</strong>
+
+        <div class="battlefield">
+          <div class="area-komputer">
+            <span class="area-label">Computer</span>
+            <img
+              src="img/gajah.png"
+              class="img-komputer"
+              alt="Pilihan computer"
+            />
+          </div>
+
+          <div class="info" aria-live="polite">Pilih jagoanmu</div>
+
+          <div class="area-player">
+            <span class="area-label player-name">Player</span>
+            <ul class="choices" aria-label="Pilihan player">
+              <li>
+                <button
+                  class="choice-button gajah"
+                  type="button"
+                  data-choice="gajah"
+                >
+                  <img src="img/gajah.png" alt="" />
+                  <span>Gajah</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="choice-button orang"
+                  type="button"
+                  data-choice="orang"
+                >
+                  <img src="img/orang.png" alt="" />
+                  <span>Orang</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="choice-button semut"
+                  type="button"
+                  data-choice="semut"
+                >
+                  <img src="img/semut.png" alt="" />
+                  <span>Semut</span>
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="score-box">
-          <span>Computer</span>
-          <strong class="score-computer">0</strong>
-        </div>
-      </div>
-      <div class="area-komputer">
-        <img src="img/gajah.png" class="img-komputer" />
-      </div>
-      <div class="info"></div>
-      <div class="area-player">
-        <ul>
-          <li>
-            <img src="img/gajah.png" class="gajah" />
-            <p>Gajah</p>
-          </li>
-          <li>
-            <img src="img/orang.png" class="orang" />
-            <p>Orang</p>
-          </li>
-          <li>
-            <img src="img/semut.png" class="semut" />
-            <p>Semut</p>
-          </li>
-        </ul>
+      </section>
+    </main>
+
+    <div class="popup name-popup">
+      <div class="popup-box name-popup-box">
+        <div class="popup-badge">Player Profile</div>
+        <h2 class="popup-title">Siapa nama kamu?</h2>
+        <form class="name-form">
+          <label class="sr-only" for="playerName">Nama player</label>
+          <input
+            id="playerName"
+            class="name-input"
+            name="playerName"
+            type="text"
+            maxlength="16"
+            autocomplete="off"
+            placeholder="Masukkan nama"
+            required
+          />
+          <button class="save-name" type="submit">Simpan Nama</button>
+        </form>
       </div>
     </div>
 
-    <div class="popup start-popup">
+    <div class="popup start-popup hidden">
       <div class="popup-box start-popup-box">
         <div class="popup-badge">Suwit Jawa</div>
         <h2 class="popup-title">Siap Bermain?</h2>
-        <p class="popup-message">Mainkan 5 ronde. Yuk, main bersama ionbisa.</p>
+        <p class="popup-message">Mainkan 5 ronde dan rebut skor tertinggi.</p>
         <button class="start-game" type="button">Mulai Bermain</button>
       </div>
     </div>
