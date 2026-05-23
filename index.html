@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,6 +10,20 @@
     <h1>Suwit Jawa v2.0</h1>
 
     <div class="container">
+      <div class="scoreboard">
+        <div class="score-box">
+          <span>Player</span>
+          <strong class="score-player">0</strong>
+        </div>
+        <div class="score-round">
+          <span>Ronde</span>
+          <strong class="round-number">1/5</strong>
+        </div>
+        <div class="score-box">
+          <span>Computer</span>
+          <strong class="score-computer">0</strong>
+        </div>
+      </div>
       <div class="area-komputer">
         <img src="img/gajah.png" class="img-komputer" />
       </div>
@@ -29,6 +43,24 @@
             <p>Semut</p>
           </li>
         </ul>
+      </div>
+    </div>
+
+    <div class="popup start-popup">
+      <div class="popup-box start-popup-box">
+        <div class="popup-badge">Suwit Jawa</div>
+        <h2 class="popup-title">Siap Bermain?</h2>
+        <p class="popup-message">Mainkan 5 ronde. Yuk, main bersama ionbisa.</p>
+        <button class="start-game" type="button">Mulai Bermain</button>
+      </div>
+    </div>
+
+    <div class="popup game-popup hidden">
+      <div class="popup-box">
+        <div class="popup-badge">Game Over</div>
+        <h2 class="popup-title">Player Menang!</h2>
+        <p class="popup-message">Skor akhir 0 - 0</p>
+        <button class="play-again" type="button">Main Lagi</button>
       </div>
     </div>
 
